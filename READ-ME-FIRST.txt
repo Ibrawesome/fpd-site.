@@ -1,0 +1,29 @@
+HOW TO PUT THIS SITE ONLINE (simple steps)
+
+Admin login:  IBRAWESOME  /  6793
+
+STEP 1 - Make a GitHub account (free): https://github.com
+STEP 2 - Click "+" (top right) > "New repository". Name it: fpd-site. Click "Create repository".
+STEP 3 - Click "uploading an existing file".
+         Open this folder on your computer, select EVERYTHING inside it
+         (index.html, netlify.toml, package.json and the "netlify" folder)
+         and drag them into GitHub. Click "Commit changes".
+STEP 4 - Go to https://app.netlify.com > "Add new site" > "Import an existing project" > GitHub > pick fpd-site.
+         Leave all settings as they are. Click "Deploy".
+STEP 5 - Wait 1-2 minutes. Open your Netlify link. Register a test student,
+         then log in as admin to see that student.
+
+OPTIONAL (safer): Netlify > Site configuration > Environment variables. Add:
+   ADMIN_USER = your own username
+   ADMIN_PASS = your own password
+   AUTH_SECRET = any long random text
+Then Deploys > Trigger deploy.
+
+Folder layout (do not change):
+fpd-site/
+  index.html
+  netlify.toml
+  package.json
+  netlify/
+    functions/
+      api.mjs
